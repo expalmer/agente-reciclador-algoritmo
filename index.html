@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agente Reciclador de Lixo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="terminal" id="terminal">
+    <div class="shell">
+      <div class="upper">
+        <div class="btn red"></div>
+        <div class="btn yellow"></div>
+        <div class="btn green"></div>
+      </div>
+      <div class="screen">
+        <p>
+          <span class="symbol">$</span>
+          <input type="text" placeholder="help" id="command">
+        </p>
+        <div id="output"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div id="start">
+      <div class="box box-10" id="grid"></div>
+    </div>
+  </div>
+  <script src="js/libs/lodash.js"></script>
+  <script src="js/libs/jquery.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    $(function() {
+      var app = new App();
+    });
+  </script>
+</body>
+</html>

@@ -8,6 +8,8 @@ Vamos usar uma matriz de `10 x 10`
 
 ### 1) Acesse o link do projeto.
 
+Acesse [ Clicando nesse Link ](http://expalmer.github.io/agente-reciclador-algoritmo/)
+
 ### 2) Crie o ambiente.
 
 Preencha a grade com o `agente`, `lixeira` e os obstaculos onde preferir.
@@ -25,8 +27,6 @@ $ export csv
 Então vai aparecer a matriz logo abaixo, copie ela e cole num arquivo ``.csv`` ou `.txt` para você importar para seu programa.
 
 ### 4) Seu Algoritmo.
-
-
 
 Agora é com você, faça o **parse** da string, passe no seu algoritmo ( faça seus ``paranauês`` ) e retorne uma string com este formato:
 

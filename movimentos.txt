@@ -1,0 +1,16 @@
+
+MOVIMENTOS TESTADOS
+
+OK
+a,o,o,o,x,o,o,o,o,o
+o,o,o,o,o,o,o,o,o,o
+o,o,x,x,o,o,o,o,o,o
+o,o,o,o,o,o,o,o,o,o
+o,x,x,o,o,x,x,x,x,x
+o,o,o,o,o,x,l,o,o,o
+o,x,x,x,o,x,x,x,x,o
+o,x,o,o,x,o,o,o,o,o
+o,x,x,x,x,o,o,o,o,o
+o,o,o,o,o,o,o,o,o,o
+
+a,o,o,o,x,o,o,o,o,o o,o,o,o,o,o,o,o,o,o o,o,x,x,o,o,o,o,o,o o,o,o,o,o,o,o,o,o,o o,x,x,o,o,x,x,x,x,x o,o,o,o,o,x,l,o,o,o o,x,x,x,o,x,x,x,x,o o,x,o,o,x,o,o,o,o,o o,x,x,x,x,o,o,o,o,o o,o,o,o,o,o,o,o,o,o

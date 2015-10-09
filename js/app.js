@@ -56,6 +56,8 @@
     var output = [];
     var clear = false;
 
+    var data;
+
     // help
     if( value === "help" ) {
       output.push("<span class='green'>export [csv | string]</span> para exportar o ambiente");
@@ -66,10 +68,11 @@
     }
 
 
-    // Import
-    if( value.indexOf("import ") > -1  ) {
-      this.getAlgoritmos( value.split("import ")[1] );
-      output.push( "<span class='green'> Importado </span>" );
+    // Add
+    if( value.indexOf("add ") > -1  ) {
+      data = value.split("add ")[1];
+      this.addAlgoritmos( data );
+      output.push( "<span class='green'> Added </span>" );
       clear = true;
     }
 
@@ -85,9 +88,16 @@
     }
 
     // Import
+    if( value.indexOf("import ") > -1  ) {
+      data = value.split("import ")[1];
+      output.push( this.setAmbiente(data) );
+      clear = true;
+    }
+
+    // Export
     if( value.indexOf("export ") > -1  ) {
-      var file = value.split("export ")[1];
-      output.push( this.getFile(file) );
+      data = value.split("export ")[1];
+      output.push( this.getFile(data) );
       clear = true;
     }
 
@@ -116,7 +126,7 @@
 
   };
 
-  App.fn.getAlgoritmos = function ( value ) {
+  App.fn.addAlgoritmos = function ( value ) {
 
     var aux = value.split(" ");
     var name = aux[0];
@@ -141,7 +151,7 @@
     if( _.isEmpty(agente) ) {
       return "<span class='red'>coloque o agente no ambiente</span>";
     }
-    var delay = 1000;
+    var delay = 500;
     var time  = 0;
     var count = 0;
     var move = function ( prev, next ) {
@@ -182,10 +192,27 @@
     return agente;
   };
 
+  App.fn.setAmbiente = function ( data ) {
+
+    var self = this;
+    data = data.split(" ");
+    data.map(function( x, xIndex ) {
+      return x.split(',')
+              .map(function( y, yIndex ) {
+                self.ambiente[xIndex][yIndex] = y;
+                return { x: xIndex, y: yIndex };
+              });
+    });
+
+    this.render();
+
+    return "<span class='green'>Imported</span>";
+
+  };
+
   App.fn.getFile = function ( file ) {
 
     var sep = file === "csv" ? "<br />" : "|";
-
     var res = '';
     _.each(this.ambiente, function(x) {
       var arr = [];

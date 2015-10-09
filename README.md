@@ -37,14 +37,14 @@ Agora é com você, faça o **parse** da string, passe no seu algoritmo ( faça 
 Essa string significa `x,y` separados por `pipe` tá ligado ? Sim né!
 
 
-### 5) Importe sua string.
+### 5) Adicione sua string.
 
 Digite no terminal ao lado:
 ```shell
-$ import seunome 1,2|1,3|1,4|1,5|2,5|3,5|4,5
+$ add seunome 1,2|1,3|1,4|1,5|2,5|3,5|4,5
 ```
 
-Aqui você coloca o `import` + `seunome` + `string`. O parametro `seunome` é como iremos executar logo a seguir.
+Aqui você coloca o `add` + `seunome` + `string`. O parametro `seunome` é como iremos executar logo a seguir.
 
 ### 6) Fazer o agente andar até a lixeira
 
@@ -54,3 +54,14 @@ $ exec seunome
 ```
 
 Pronto! Agora basta ver o agente indo até a lixeira.
+
+### Você pode importar um ambiente
+
+Pegue o conteúdo do `csv` e digite no terminal.
+
+```shell
+$ import a,o,o,o,x,o,o,o,o,o o,o,o,o,o,o,o,o,o,o ...
+```
+
+O csv é enorme, por isso coloquei os `...` no final, mas vai firme que dá certo!
+
